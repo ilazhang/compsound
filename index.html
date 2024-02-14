@@ -3,18 +3,11 @@
     <head>
         <meta charset="UTF-8">
     
-        <title>Keyboard with Harmonizer</title>
+        <title>Synthesis</title>
     </head>
     <body>
-        <h1>Keyboard with Harmonizer</h1>
+        <h1>Synthesis</h1>
         <p>Press the keys on your keyboard to play musical notes!</p>
-        <label for="harmonizationChoice">Harmonization:</label>
-        <select id="harmonizationChoice">
-            <option value="none">No Harmonization</option>
-            <option value="fifth">Perfect Fifth</option>
-            <option value="octave">Octave</option>
-            <option value="all">All</option>
-        </select>
         <br>
         <label for="waveformChoice">Waveform:</label>
         <select id="waveformChoice">
@@ -23,6 +16,32 @@
             <option value="sawtooth">Sawtooth</option>
             <option value="triangle">Triangle</option>
         </select>
+        <br>
+        <label>
+            <input type="checkbox" id="additiveCheckbox"> Additive Synthesis
+        </label>
+        <br>
+        <label for="numPartialsSlider">Number of Partials:</label>
+        <br>
+        <input type="range" min="0" max="5" value="3" class="slider" id="numPartialsSlider">
+        <br>
+        <input type="checkbox" id="amCheckBox">
+        <label for="amCheckBox">AM Synthesis</label>
+        <br>
+        <label for="amFrequencySlider">AM Frequency:</label>
+        <br>
+        <input type="range" id="amFrequencySlider" min="20" max="1000" value="100" step="1">
+        <br>
+        <input type="checkbox" id="fmCheckBox">
+        <label for="fmCheckBox">FM Synthesis</label>
+        <br>
+        <label for="fmFrequencySlider">FM Frequency:</label>
+        <br>
+        <input type="range" id="fmFrequencySlider" min="20" max="1000" value="100" step="1">
+        <br>
+        <input type="checkbox" id="lfoCheckBox">
+        <label for="lfoCheckBox">LFO</label>
+        <br>
         <div class="table-container">
         <div>
         <h2>First Octave</h2>
@@ -140,6 +159,6 @@
         </table>
     </div>
     </div>
-        <script src="keyboard.js"></script>
+        <script src="synth6.js"></script>
 </body>
 </html>
